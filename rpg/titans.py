@@ -1,14 +1,16 @@
 import random
-name1= input('Введи имя первого игрока:')
+name1 = input('Введи имя первого игрока:')
 dam1 = input("введи свой урон(1-50):")
 name2 = input('Введи имя второго игрока:')
 dam2 = input('Введи его урон(1-50):')
+
 
 class Hero():
     def __init__(self, name, dd):
         self.heals = 100
         self.name = name
         self.dd = dd
+
     def hit(self, obj):
         if obj.heals != 0:
             damage = random.randint(0, self.dd)
